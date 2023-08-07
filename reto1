@@ -1,0 +1,31 @@
+while True: #usamos while true con try para que no pueda pasar el usuario sin que se ingrese un valor numerico
+    try:
+        añoactual = int(input("Hola, introduce el año actual: "))
+        break
+    except ValueError:
+        print("Error, no ingreso un valor numérico, vuelva a intentarlo")
+
+while True:
+    try:
+        añodiferente = int(input("Introduce ahora un año cualquiera diferente al actual: "))
+        break
+    except ValueError:
+        print("Error, no ingreso un valor numérico, vuelva a intentarlo")
+    
+
+resultado1 = añoactual - añodiferente
+resultado2 = añodiferente - añoactual
+
+if resultado1 >1:
+    print("Han pasado: " + str(resultado1) + " años desde el año que has introducido")
+elif resultado1 == 1:
+    print("Desde el año " + str(añodiferente) + " ha pasado 1 año")
+elif añoactual == añodiferente:
+    print("Estás ingresando 2 veces el mismo año, prueba de nuevo")
+
+
+
+if resultado2 >1:
+    print("Faltan: " + str(resultado2) + " años para llegar al año que has introducido")
+elif resultado2 ==1:
+    print("Para llegar a " +str(añodiferente) + " falta 1 año")
